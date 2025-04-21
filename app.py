@@ -3,7 +3,7 @@ from flask import Flask , request
 app = Flask(__name__)
 @app.route('/whatsapp/incoming' , methods=['POST'])
 def incoming_message():
-    data = request.from
+    data = request.form
     print("Received whatsapp message:" , data)
     
 
